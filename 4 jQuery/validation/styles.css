@@ -1,0 +1,33 @@
+input {
+	width:200px;
+	height:30px;
+	padding:7px;
+	border-radius:5px;
+	border:1px solid gray;
+	font-size:1em;
+	margin:0px 0px 10px 0px;
+}
+
+label {
+	width:200px;
+	float:left;
+	padding:10px 0px 0px 0px;
+}
+
+#wrapper {
+	width:600px;
+	margin:0px auto;
+	font-family:helvetica;
+	font-size:1.2em;
+}
+
+#submitButton {
+	height:50px;
+	width:100px;
+	margin:0px 0px 0px 200px;
+}
+
+#error {
+	color:red;
+	margin:20px;
+}

@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+	<!--CodePlayer website - a site that allows the user to enter HTML, CSS and
+	Javascript and have it run on a web page-->
+	
+    <title>jQuery</title>
+	
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+	
+	<link rel="stylesheet" type="text/css" href="styles.css" />
+	
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css" />
+	
+	<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+</head>
+<body>
+	<div id="wrapper">
+	
+		<div id="navbar">
+		
+			<div id="logo">
+				CodePlayer
+			</div>
+			
+			<div id="buttonDiv">
+			
+				<button id="runButton">Run</button>
+				
+			</div>
+			
+			<ul id="toggles">
+				<li class="toggle selected">HTML</li>
+				<li class="toggle">CSS</li>
+				<li class="toggle">JS</li>
+				<li class="toggle selected" style="border:none">Result</li>
+			</ul>
+		
+		</div>
+		
+		<div class="clear"></div>
+	
+		<div class="codeContainer" id="HTMLContainer">
+		
+			<div class="codeLabel">
+				HTML
+			</div>
+		
+			<textarea id="htmlCode"><div id="test"></div></textarea>
+		
+		</div>
+		
+		<div class="codeContainer" id="CSSContainer">
+		
+			<div class="codeLabel">
+				CSS
+			</div>
+		
+			<textarea id="cssCode">html {background-color:blue}</textarea>
+		
+		</div>
+		
+		<div class="codeContainer" id="JSContainer">
+		
+			<div class="codeLabel">
+				JS
+			</div>
+		
+			<textarea id="jsCode">document.getElementById("test").innerHTML = "It's working!";</textarea>
+		
+		</div>
+		
+		<div class="codeContainer" id="ResultContainer">
+		
+			<div class="codeLabel">
+				Result
+			</div>
+		
+			<iframe id="resultFrame"></iframe>
+		
+		</div>
+	
+	</div>
+	
+	<script type="text/javascript" src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+div {
+	width:100px;
+	height:100px;
+	margin:10px;
+	float:left;
+}
+
+p {
+	padding:5px;
+	margin:5px;
+	font-family:Arial, Helvetica, sans-serif;
+	text-align:justify;
+}
+
+a:visited {
+	color:green;
+}
+
+a:hover {
+	font-size:50px;
+}
+
+.bold {
+	font-weight:bold;
+}
+
+.italic {
+	font-style:italic;
+}
+
+.underline {
+	text-decoration:underline;
+}
+
+.red {
+	background-color:#FF7777;
+	border:5px black solid;
+}
+
+.blue {
+	background-color:#6666DD;
+	border:5px yellow solid;
+}
+
+.green {
+	background-color:#66DD66;
+	border-radius:10px;
+}

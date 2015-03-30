@@ -1,0 +1,92 @@
+body {
+	margin:0px;
+	padding:0px;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-weight: 300;
+}
+
+iframe {
+	height:100%;
+	position:relative;
+	left:20px;
+	border:none;
+}
+
+.clear {
+	clear:both;
+}
+
+.codeContainer {
+	height:100%;
+	width:50%;
+	float:left;
+	position:relative;
+}
+
+.codeContainer textarea {
+	width:100%;
+	height:100%;
+	border:none;
+	border-right:1px solid grey;
+	font-family:monotype;
+	font-size:1.05em;
+	padding:5px;
+	box-sizing:border-box;
+}
+
+.codeLabel {
+	position:absolute;
+	right:10px;
+	top:10px;
+	font-weight:bold;
+}
+
+.selected {
+	background-color:grey;
+}
+
+#navbar {
+	width:100%;
+	height:40px;
+	background-color:#e0e0e0;
+	border-bottom:1px solid grey;
+}
+
+#logo {
+	padding:5px 0px 0px 20px;
+	font-weight:bold;
+	font-size:1.2em;
+	float:left;
+}
+
+#buttonDiv {
+	float:right;
+	padding:5px 10px 0px 0px;
+}
+
+#runButton {
+	font-size:1.2em;
+}
+
+#toggles {
+	width:227px;
+	margin:0px auto;
+	list-style:none;
+	border:1px solid grey;
+	border-radius:3px;
+	height:27px;
+	padding:0px;
+	position:relative;
+	top:5px;
+}
+
+#toggles li {
+	width:46px;
+	float:left;
+	border-right:1px solid grey;
+	padding:5px 5px;
+}
+
+#CSSContainer, #JSContainer {
+	display:none;
+}

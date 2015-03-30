@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+	<!--A page with a form that uses jQuery to perform some validation-->
+	
+    <title>Form Validation</title>
+	
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+	
+	<link rel="stylesheet" type="text/css" href="styles.css" />
+	
+	<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+</head>
+<body>
+	<div id="wrapper">
+	
+		<div id="error"></div>
+		
+		<form id="validationForm">
+		
+			<label for="email">Email</label>
+			<input id="email" name="email" />
+			
+			<label for="phone">Telephone</label>
+			<input id="phone" name="phone" />
+			
+			<label for="pass">Password</label>
+			<input id="passOne" name="pass" type="password" />
+			
+			<label for="pass">Confirm Password</label>
+			<input id="passTwo" name="pass" type="password" />
+			
+			<input id="submitButton" type="submit" value="Submit" />
+		
+		</form>
+		
+	</div>
+	
+	<script>
+		$("#validationForm").submit(function(event) {
+			var errorMessage = "";
+		
+			event.preventDefault();
+			
+			/* Check if the email address is valid, then if the phone number is
+			numeric, if both passwords match and then finally return a result
+			depending on valid inputs
+			*/
+			if(!isValidEmailAddress($("#email").val())) {
+				errorMessage += "Please enter a valid email address<br />";
+			}
+			if(!$.isNumeric($("#phone").val())) {
+				errorMessage += "Please enter a valid phone number<br />";
+			}
+			if($("#passOne").val()!=$("#passTwo").val()) {
+				errorMessage += "Please enter matching passwords<br />";
+			}
+			
+			if(errorMessage=="") {
+				alert("Success!");
+			} else {
+				$("#error").html(errorMessage);
+			}
+		});
+		
+		/* Regex used for checking if an email is valid and return the result
+		*/
+		function isValidEmailAddress(emailAddress) {
+			var pattern = new RegExp(/^((([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*)|((\x22)((((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(([\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|\x21|[\x23-\x5b]|[\x5d-\x7e]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(\\([\x01-\x09\x0b\x0c\x0d-\x7f]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))))*(((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(\x22)))@((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?$/i);
+			return pattern.test(emailAddress);
+		};
+	</script>
+</body>
+</html>

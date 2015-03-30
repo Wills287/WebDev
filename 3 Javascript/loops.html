@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+	<!--Web page to practise using some Javascript loops-->
+	
+    <title>Javascript</title>
+	
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+	<div id="firstDiv"></div>
+	
+	<p>How many fingers are you holding up? (enter number between 1 and 5)</p>
+	
+	<input id="myNumber" />
+	
+	<button id="guess">Guess</button>
+
+	<script type="text/javascript">
+		var arrayString = "";
+		var myArray = ["pizza", "chocolate", "crisps"];
+		
+		for(var i = 0; i < myArray.length; i++) {
+			arrayString = arrayString + myArray[i] + " ";
+			firstDiv.innerHTML = arrayString;
+		}
+		
+		guess.onclick = function() {
+			var gotIt = false;
+			var guesses = 0;
+		
+			while(gotIt == false && guesses < 50) {
+				var x = Math.floor((Math.random() * 5) + 1);
+			
+				guesses++;
+				
+				if(x == myNumber.value) {
+					gotIt = true;
+					alert("I got it! It was: " + x + " and took " + guesses + " guess(es).");
+				}
+			}
+		}
+	</script>
+</body>
+</html>

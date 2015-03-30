@@ -1,0 +1,15 @@
+body {
+	font-family:Verdana,Geneva,sans-serif;
+}
+
+.bold {
+	font-weight:bold;
+}
+
+#box {
+	height:100px;
+	width:100px;
+	background-color:red;
+	display:none;
+	position:relative;
+}
